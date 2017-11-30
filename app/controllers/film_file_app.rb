@@ -1,4 +1,8 @@
 class FilmFile < Sinatra::Base
+  get '/' do
+    erb :home
+  end
+
   get "/films" do
     @films = Film.all
     erb :"films/index"
